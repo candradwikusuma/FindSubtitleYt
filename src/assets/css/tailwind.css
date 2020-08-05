@@ -1,0 +1,46 @@
+@tailwind base;
+
+@tailwind components;
+.contain {
+  @apply mx-auto  h-screen;
+}
+.d {
+  @apply h-full flex items-center;
+}
+.a {
+  @apply flex justify-center flex-col rounded-b-20px h-50vh bg-primary z-10;
+  box-shadow: 10px 10px 20px 2px rgba(0, 0, 0, 0.2);
+}
+.b {
+  @apply flex flex-col bg-white h-200vh bg-secondary -mt-5 z-0;
+}
+.wrapper {
+  @apply grid grid-flow-col grid-cols-2 grid-rows-5 gap-4 px-24 py-20;
+}
+.item {
+  @apply text-sm h-16 bg-thirdly p-3 text-primary rounded-md;
+}
+
+@screen md {
+  .contain {
+    @apply px-10;
+  }
+  .a {
+    @apply rounded-b-20px h-40vh;
+  }
+  .b {
+    @apply -mt-5;
+  }
+}
+@screen lg {
+  .contain {
+    @apply px-16;
+  }
+  .a {
+    @apply rounded-20px h-90vh;
+  }
+  .b {
+    @apply rounded-r-20px mt-0  h-90vh -ml-5;
+  }
+}
+@tailwind utilities;
