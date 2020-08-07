@@ -1,9 +1,9 @@
 <template>
   <div class="contain">
-    <div class="d grid grid-cols-3">
-      <div class="a lg:col-span-1 col-span-3">
+    <div class="contain_grid grid grid-cols-3">
+      <header class="header lg:col-span-1 col-span-3">
         <div class="grid grid-cols-8 gap-10">
-          <div class="e col-start-2 md:col-start-4 lg:col-start-2">
+          <div class="brand col-start-2 md:col-start-4 lg:col-start-2">
             <svg
               class="logo logo_sm"
               version="1.1"
@@ -27,7 +27,7 @@
             </svg>
           </div>
 
-          <div class="f">
+          <div class="brand_title">
             <h1 class="title">FIND</h1>
             <h1 class="title">SUBTITLE</h1>
           </div>
@@ -77,10 +77,9 @@
             </transition>
           </div>
         </div>
-      </div>
+      </header>
       <!-- content -->
-      <div class="b lg:col-span-2 col-span-3 relative">
-        <!-- <div class="grid grid-flow-col grid-cols-2 grid-rows-5 gap-4 px-24 py-20"> -->
+      <main class="content lg:col-span-2 col-span-3 relative">
         <transition name="fade">
           <div v-if="kataKunci.length < 1">
             <img class="home absolute" src="./assets/undraw_web_search_eetr.svg" alt />
@@ -94,19 +93,6 @@
         <Container tag="transition-group" name="slide">
           <Item v-for="(hasil, index) in daftarHasil" :key="index" :hasil="hasil" :url="url" />
         </Container>
-
-        <!-- <transition-group name="slide">
-            <div
-              v-for="(hasil, index) in daftarHasil"
-              :key="index"
-              class="text-sm h-16 bg-thirdly p-3 text-primary rounded-md"
-            >
-              <span v-html="hasil.text">{{hasil.text}}</span>
-
-              <a :href="`${url}&t=${hasil.start}s`" target="_blank">Youtube</a>
-            </div>
-        </transition-group>-->
-        <!-- </div> -->
 
         <div class="absolute info flex flex-row" v-if="clear">
           <div class="total text-primary mb-5 mr-1">Total Hasil: {{ paginasi.total }}</div>
@@ -177,7 +163,7 @@
             :class="{'cursor-not-allowed opacity-50':!paginasi['last']}"
           >Last</button>
         </div>
-      </div>
+      </main>
     </div>
   </div>
 </template>
@@ -368,17 +354,4 @@ mark {
 .link {
   box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
-/* .con {
-  position: relative;
-}
-.pag {
-  top: 90vh;
-  position: fixed;
-}
-.mb-5 {
-  margin-bottom: 1rem;
-}
-.mb-3 {
-  margin-bottom: 1rem;
-} */
 </style>

@@ -4,14 +4,14 @@
 .contain {
   @apply mx-auto  h-screen;
 }
-.d {
+.contain_grid {
   @apply h-full flex items-center;
 }
-.a {
+.header {
   @apply flex justify-center flex-col rounded-b-20px h-50vh bg-primary z-10;
   box-shadow: 10px 10px 20px 2px rgba(0, 0, 0, 0.2);
 }
-.b {
+.content {
   @apply flex flex-col h-150vh bg-secondary -mt-5 z-0;
 }
 .wrapper {
@@ -31,15 +31,13 @@
 .title {
   @apply text-thirdly tracking-wider -ml-2 text-xl;
 }
-.e {
+.brand {
   @apply col-span-3;
 }
-.f {
+.brand_title {
   @apply col-span-3 flex flex-col items-start justify-center;
 }
-.g {
-  @apply grid grid-cols-8 gap-10;
-}
+
 .home {
   width: 300px;
   height: 300px;
@@ -49,10 +47,10 @@
   .contain {
     @apply px-0 h-0;
   }
-  .a {
+  .header {
     @apply rounded-b-20px h-40vh;
   }
-  .b {
+  .content {
     @apply -mt-5 h-90vh;
   }
   .title {
@@ -68,10 +66,10 @@
   .item {
     @apply text-xs h-18 bg-thirdly p-2;
   }
-  .e {
+  .brand {
     @apply col-span-3;
   }
-  .f {
+  .brand_title {
     @apply col-span-2;
   }
   .wrapper {
@@ -86,16 +84,16 @@
   .contain {
     @apply px-16 h-screen;
   }
-  .a {
+  .header {
     @apply rounded-20px h-90vh;
   }
-  .b {
+  .content {
     @apply rounded-r-20px mt-0  h-90vh -ml-5;
   }
-  .e {
+  .brand {
     @apply col-start-2 col-span-3;
   }
-  .f {
+  .brand_title {
     @apply col-span-4;
   }
   .title {
@@ -116,16 +114,16 @@
   .contain {
     @apply px-16 h-screen;
   }
-  .a {
+  .header {
     @apply rounded-20px h-90vh;
   }
-  .b {
+  .content {
     @apply rounded-r-20px mt-0  h-90vh -ml-5;
   }
-  .e {
+  .brand {
     @apply col-start-2 col-span-3;
   }
-  .f {
+  .brand_title {
     @apply col-span-4;
   }
   .title {
