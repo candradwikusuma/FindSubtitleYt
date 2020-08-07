@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="item grid grid-cols-8">
-      <div class="col-span-7">
+    <div class="item grid grid-cols-6">
+      <div class="col-span-5">
         <span v-html="hasil.text">{{hasil.text}}</span>
       </div>
       <div class="col-span-1 flex flex-col items-center justify-center">

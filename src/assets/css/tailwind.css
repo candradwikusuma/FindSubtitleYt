@@ -12,29 +12,79 @@
   box-shadow: 10px 10px 20px 2px rgba(0, 0, 0, 0.2);
 }
 .b {
-  @apply flex flex-col bg-white h-200vh bg-secondary -mt-5 z-0;
+  @apply flex flex-col h-150vh bg-secondary -mt-5 z-0;
 }
 .wrapper {
-  @apply grid grid-flow-col grid-cols-2 grid-rows-5 gap-4 px-24 py-20;
+  @apply grid grid-flow-col grid-cols-1 grid-rows-10 gap-2 px-8 py-12;
 }
 .item {
   @apply text-sm h-16 bg-thirdly p-3 text-primary rounded-md;
 }
+.logo_sm {
+  @apply ml-12;
+}
+.logo {
+  fill: #89c9b8;
+  width: 90px;
+  height: 90px;
+}
+.title {
+  @apply text-thirdly tracking-wider -ml-2 text-xl;
+}
+.e {
+  @apply col-span-3;
+}
+.f {
+  @apply col-span-3 flex flex-col items-start justify-center;
+}
+.g {
+  @apply grid grid-cols-8 gap-10;
+}
+.home {
+  width: 300px;
+  height: 300px;
+}
 
 @screen md {
   .contain {
-    @apply px-10;
+    @apply px-0 h-0;
   }
   .a {
     @apply rounded-b-20px h-40vh;
   }
   .b {
-    @apply -mt-5;
+    @apply -mt-5 h-90vh;
+  }
+  .title {
+    @apply text-sm -ml-210;
+  }
+  .logo_sm {
+    @apply ml-0;
+  }
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+  .item {
+    @apply text-xs h-18 bg-thirdly p-2;
+  }
+  .e {
+    @apply col-span-3;
+  }
+  .f {
+    @apply col-span-2;
+  }
+  .wrapper {
+    @apply grid grid-flow-col grid-cols-2 grid-rows-5 gap-4 px-24 py-16;
+  }
+  .home {
+    width: 400px;
+    height: 400px;
   }
 }
 @screen lg {
   .contain {
-    @apply px-16;
+    @apply px-16 h-screen;
   }
   .a {
     @apply rounded-20px h-90vh;
@@ -42,5 +92,55 @@
   .b {
     @apply rounded-r-20px mt-0  h-90vh -ml-5;
   }
+  .e {
+    @apply col-start-2 col-span-3;
+  }
+  .f {
+    @apply col-span-4;
+  }
+  .title {
+    @apply text-2xl ml-0;
+  }
+  .logo {
+    width: 110px;
+    height: 110px;
+  }
+  .item {
+    @apply text-xs h-18 bg-thirdly p-3;
+  }
+  .wrapper {
+    @apply grid grid-flow-col grid-cols-2 grid-rows-5 gap-4 px-24 py-12;
+  }
 }
+@screen xl {
+  .contain {
+    @apply px-16 h-screen;
+  }
+  .a {
+    @apply rounded-20px h-90vh;
+  }
+  .b {
+    @apply rounded-r-20px mt-0  h-90vh -ml-5;
+  }
+  .e {
+    @apply col-start-2 col-span-3;
+  }
+  .f {
+    @apply col-span-4;
+  }
+  .title {
+    @apply text-2xl -ml-2;
+  }
+  .logo {
+    width: 120px;
+    height: 120px;
+  }
+  .item {
+    @apply text-sm h-16 bg-thirdly p-3 text-primary rounded-md;
+  }
+  .wrapper {
+    @apply grid grid-flow-col grid-cols-2 grid-rows-5 gap-4 px-24 py-20;
+  }
+}
+
 @tailwind utilities;
